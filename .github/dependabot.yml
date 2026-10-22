@@ -1,0 +1,29 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    labels: [dependencies, ci]
+
+  - package-ecosystem: npm
+    directory: /frontend
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    versioning-strategy: lockfile-only
+    labels: [dependencies, frontend]
+    groups:
+      minor-and-patch:
+        update-types: [minor, patch]
+
+  # Python pins are reviewed by hand: bumping fastapi/sqlalchemy/pydantic changes
+  # validation and ORM behaviour, which for a security tool is a decision, not
+  # maintenance. Enable this only if you intend to review every PR it opens.
+  # - package-ecosystem: pip
+  #   directory: /backend
+  #   schedule:
+  #     interval: weekly

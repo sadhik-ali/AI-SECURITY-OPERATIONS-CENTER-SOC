@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a vulnerability
+    url: https://github.com/sadhik-ali/AI-Security-Operations-Center-SOC/security/advisories/new
+    about: Please do not open a public issue for anything that could be exploited. See SECURITY.md.
+  - name: Project documentation
+    url: https://github.com/sadhik-ali/AI-Security-Operations-Center-SOC/tree/master/docs
+    about: Architecture, API reference, detection rules and the data model live in docs/.

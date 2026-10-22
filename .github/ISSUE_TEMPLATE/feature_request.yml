@@ -1,0 +1,49 @@
+name: "✨ Feature request"
+description: Suggest an idea for the dashboard, a detection rule, or an integration.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Useful framing: which analyst task is hard today, and what would the
+        dashboard let you do afterwards?
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem this solves
+      placeholder: As an analyst, I cannot …
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      placeholder: What should the UI / API / rule do?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - frontend (UI)
+        - backend (API)
+        - detection rules
+        - correlation / risk scoring
+        - AI assistant
+        - ingestion (Wazuh / Sysmon / auth logs)
+        - OpenSearch
+        - reports / export
+        - deployment
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Screenshots, sample log lines, references to public research.
