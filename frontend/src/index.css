@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    @apply border-soc-700/70;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-soc-950 font-sans text-soc-100 antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'ss01';
+    background-image:
+      radial-gradient(1100px 520px at 12% -10%, rgba(56, 189, 248, 0.08), transparent 60%),
+      radial-gradient(900px 480px at 100% 0%, rgba(239, 68, 68, 0.05), transparent 55%);
+    background-attachment: fixed;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-soc-950;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full border-2 border-solid border-soc-950 bg-soc-600;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-soc-500;
+  }
+
+  table {
+    font-variant-numeric: tabular-nums;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent/70 ring-offset-2 ring-offset-soc-950;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-lg border border-soc-700/60 bg-soc-900/70 shadow-panel backdrop-blur-sm;
+  }
+
+  .panel-head {
+    @apply flex items-center justify-between gap-4 border-b border-soc-700/60 px-4 py-3;
+  }
+
+  .panel-title {
+    @apply text-[13px] font-semibold uppercase tracking-wider text-soc-300;
+  }
+
+  .label {
+    @apply mb-1.5 block text-xs font-medium uppercase tracking-wider text-soc-400;
+  }
+
+  .field {
+    @apply w-full rounded-md border border-soc-700 bg-soc-900 px-3 py-2 text-sm text-soc-100
+      placeholder:text-soc-500 transition-colors
+      hover:border-soc-600 focus:border-accent/70 focus:outline-none focus:ring-1 focus:ring-accent/40;
+  }
+
+  .btn {
+    @apply inline-flex select-none items-center justify-center gap-2 rounded-md border px-3 py-2
+      text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-45;
+  }
+
+  .btn-primary {
+    @apply btn border-accent/40 bg-accent/15 text-accent hover:bg-accent/25;
+  }
+
+  .btn-ghost {
+    @apply btn border-soc-700 bg-soc-800/60 text-soc-200 hover:border-soc-600 hover:bg-soc-750 hover:text-soc-100;
+  }
+
+  .btn-danger {
+    @apply btn border-red-500/40 bg-red-500/12 text-red-300 hover:bg-red-500/22;
+  }
+
+  .btn-sm {
+    @apply px-2.5 py-1.5 text-xs;
+  }
+
+  .th {
+    @apply whitespace-nowrap border-b border-soc-700/60 px-4 py-2.5 text-left text-[11px] font-semibold uppercase tracking-wider text-soc-400;
+  }
+
+  .td {
+    @apply border-b border-soc-800/70 px-4 py-2.5 text-sm text-soc-200 align-middle;
+  }
+
+  .row-hover {
+    @apply cursor-pointer transition-colors hover:bg-soc-800/55;
+  }
+
+  .mono {
+    @apply font-mono text-[12.5px];
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border px-2 py-0.5 text-[11px] font-semibold;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1 rounded border px-1.5 py-0.5 text-[11px] font-medium;
+  }
+}
+
+.recharts-cartesian-axis-tick-value,
+.recharts-pie-label-text,
+.recharts-legend-item-text {
+  fill: #8b9ac0;
+  font-size: 11px;
+}

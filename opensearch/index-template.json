@@ -1,0 +1,35 @@
+{
+  "index_patterns": ["ai-soc-events-*"],
+  "priority": 100,
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 0,
+      "index.mapping.total_fields.limit": 2000
+    },
+    "mappings": {
+      "dynamic": "strict",
+      "properties": {
+        "event_time":   { "type": "date" },
+        "ingested_at":  { "type": "date" },
+        "source":       { "type": "keyword" },
+        "event_type":   { "type": "keyword" },
+        "category":     { "type": "keyword" },
+        "severity":     { "type": "keyword" },
+        "message":      { "type": "text", "fields": { "keyword": { "type": "keyword", "ignore_above": 512 } } },
+        "hostname":     { "type": "keyword" },
+        "username":     { "type": "keyword" },
+        "src_ip":       { "type": "ip" },
+        "dst_ip":       { "type": "ip" },
+        "process_name": { "type": "keyword" },
+        "rule_ref":     { "type": "keyword" },
+        "external_id":  { "type": "keyword" },
+        "ingest_key":   { "type": "keyword" },
+        "demo":         { "type": "boolean" },
+        "raw":          { "type": "object", "enabled": false },
+        "normalized":   { "type": "flattened", "ignore_above": 256 }
+      }
+    },
+    "aliases": { "ai-soc-events": {} }
+  }
+}

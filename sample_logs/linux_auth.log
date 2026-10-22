@@ -1,0 +1,34 @@
+# SYNTHETIC DATA - generated for demonstration. No real host produced these lines.
+# Format: standard Linux auth log (RFC 3164 syslog as written by rsyslog to /var/log/auth.log)
+# Hosts: web-01 (Ubuntu 22.04, public SSH)   Timezone: UTC
+Oct 22 08:14:02 web-01 sshd[21811]: Accepted publickey for deploy from 10.10.4.19 port 51222 ssh2: RSA SHA256:8hQ2mZ3vX0nFkYc1tJ7sLdA9pR4uWeQzKxNmBvC0oqE
+Oct 22 08:14:02 web-01 sshd[21811]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+Oct 22 08:14:19 web-01 sudo: deploy : TTY=pts/0 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/systemctl status app.service
+Oct 22 08:16:44 web-01 sshd[21899]: Failed password for invalid user oracle from 203.0.113.44 port 44102 ssh2
+Oct 22 08:16:46 web-01 sshd[21901]: Failed password for invalid user postgres from 203.0.113.44 port 44118 ssh2
+Oct 22 08:16:48 web-01 sshd[21903]: Failed password for invalid user test from 203.0.113.44 port 44130 ssh2
+Oct 22 08:16:50 web-01 sshd[21905]: Failed password for root from 203.0.113.44 port 44144 ssh2
+Oct 22 08:16:52 web-01 sshd[21907]: Failed password for invalid user admin from 203.0.113.44 port 44158 ssh2
+Oct 22 08:16:55 web-01 sshd[21909]: Failed password for invalid user ubuntu from 203.0.113.44 port 44170 ssh2
+Oct 22 08:16:57 web-01 sshd[21911]: Failed password for invalid user guest from 203.0.113.44 port 44184 ssh2
+Oct 22 08:16:59 web-01 sshd[21913]: Failed password for invalid user mysql from 203.0.113.44 port 44196 ssh2
+Oct 22 08:17:01 web-01 sudo: PAM authentication failed for user root
+Oct 22 08:17:03 web-01 sshd[21915]: Failed password for invalid user git from 203.0.113.44 port 44208 ssh2
+Oct 22 08:17:05 web-01 sshd[21917]: Failed password for deploy from 203.0.113.44 port 44222 ssh2
+Oct 22 08:17:07 web-01 sshd[21917]: message repeated 2 times: [ Failed password for deploy from 203.0.113.44 port 44222 ssh2]
+Oct 22 08:17:09 web-01 sshd[21917]: Accepted password for deploy from 203.0.113.44 port 44240 ssh2
+Oct 22 08:17:09 web-01 sshd[21917]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+Oct 22 08:17:22 web-01 sudo: deploy : TTY=pts/1 ; PWD=/home/deploy ; USER=root ; COMMAND=/bin/bash
+Oct 22 08:17:40 web-01 sshd[21917]: pam_unix(sshd:session): session closed for user deploy
+Oct 22 09:02:11 web-01 sshd[22340]: Accepted publickey for a.sardhi from 10.10.4.27 port 53110 ssh2: ED25519 SHA256:Lk9pZ2h0QmFzZTJDbGllbnRLZXk4czJkZg
+Oct 22 09:02:11 web-01 sshd[22340]: pam_unix(sshd:session): session opened for user a.sardhi(uid=1004) by (uid=0)
+Oct 22 09:41:03 web-01 sshd[22501]: Failed password for invalid user support from 198.51.100.77 port 60122 ssh2
+Oct 22 09:41:35 web-01 sshd[22504]: Failed password for jenkins from 198.51.100.77 port 60140 ssh2
+Oct 22 09:42:07 web-01 sshd[22509]: Failed password for backup from 198.51.100.77 port 60158 ssh2
+Oct 22 09:42:39 web-01 sshd[22512]: Failed password for monitor from 198.51.100.77 port 60174 ssh2
+Oct 22 09:43:11 web-01 sshd[22517]: Failed password for deploy from 198.51.100.77 port 60190 ssh2
+Oct 22 11:15:26 web-01 CRON[23110]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 22 11:15:26 web-01 CRON[23110]: pam_unix(cron:session): session closed for user root
+Oct 22 13:38:37 web-01 sshd[24002]: Accepted password for deploy from 203.0.113.44 port 51488 ssh2
+Oct 22 13:38:41 web-01 sudo: deploy : user NOT in sudoers ; TTY=pts/2 ; PWD=/home/deploy ; USER=root ; COMMAND=/usr/bin/id
+Oct 22 13:39:02 web-01 sshd[24002]: pam_unix(sshd:session): session closed for user deploy
