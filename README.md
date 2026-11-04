@@ -245,6 +245,7 @@ echo "SECRET_KEY=$(python -c 'import secrets;print(secrets.token_hex(32))')" >> 
 .venv/Scripts/python.exe -m uvicorn app.main:app --reload --port 8000
 ```
 
+
 First start creates `ai_soc.db`, applies the schema and seeds two analysts.
 Interactive API docs at <http://localhost:8000/docs>.
 
