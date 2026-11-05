@@ -68,6 +68,7 @@ SOC tool most needs and least often has.
 
 ---
 
+
 ## Interface tour
 
 All eight screens, rendered from the bundled synthetic corpus with no backend
