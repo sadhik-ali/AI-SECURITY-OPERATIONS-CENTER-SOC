@@ -4,6 +4,7 @@
 
 # AI-Powered Security Operations Center
 
+
 **A SOC console that ingests security telemetry, detects suspicious activity with
 deterministic rules, correlates alerts into incidents, scores risk on a scale you
 can take apart, and helps an analyst investigate.**
